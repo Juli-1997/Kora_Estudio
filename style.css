@@ -118,6 +118,78 @@ header {
     color: var(--terracota);
 }
 
+.hero-kora {
+    min-height: 350px;
+    background-color: var(--arena);
+}
+
+/* Imagen */
+.hero-imagen {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Degradado sobre la imagen */
+.hero-degradado {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.95) 25%,
+        rgba(255, 255, 255, 0.80) 45%,
+        rgba(255, 255, 255, 0.35) 65%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* Contenido */
+.contenido-hero {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+/* Etiqueta */
+.hero-kora .badge {
+    background-color: var(--arena);
+    color: var(--terracota);
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+}
+
+/* Título */
+.titulo-kora {
+    font-family: Georgia, serif;
+    color: var(--espresso);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+/* Subtítulo */
+.subtitulo-kora {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--espresso);
+    font-size: 1.15rem;
+}
+
+/* Descripción */
+.descripcion-kora {
+    color: var(--taupe);
+    font-size: 0.9rem;
+    max-width: 440px;
+    line-height: 1.6;
+}
+
+.btn-kora {
+    background-color: var(--terracota);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-kora:hover {
+    background-color: #8E4024;
+    color: white;
+}
+
 @media (max-width: 700px) {
     .navbar-kora {
         overflow-x: auto;
@@ -128,3 +200,24 @@ header {
         gap: 8px;
     }
 }
+
+/* celulares0 */
+@media (max-width: 767.98px) {
+    .hero-kora,
+    .contenido-hero {
+        min-height: 420px;
+    }
+
+    .hero-imagen {
+        object-position: 65% center;
+    }
+
+    .hero-degradado {
+        background: linear-gradient(
+            90deg,
+            rgba(248, 245, 240, 0.96),
+            rgba(248, 245, 240, 0.85)
+        );
+    }
+}
+
