@@ -1,0 +1,130 @@
+/* Fuente general */
+:root {
+    --alabastro: rgb(248, 245, 240);
+    --arena: rgb(239, 233, 224);
+    --blanco: rgb(255, 255, 255);
+    --espresso: rgb(34, 30, 28);
+    --terracota: rgb(184, 92, 56);
+    --arcilla: rgb(142, 64, 36);
+    --taupe: rgb(92, 83, 76);
+    --borde: rgb(228, 220, 209);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--alabastro);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--espresso);
+}
+
+header {
+    background-color: transparent;
+}
+
+.navbar-kora {
+    width: 100%;
+    min-height: 46px;
+    padding: 7px 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    box-shadow: 0 3px 12px rgba(34, 30, 28, 0.07);
+}
+
+.logo-kora {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--terracota);
+    color: var(--blanco);
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.logo-kora h1 {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--espresso);
+    white-space: nowrap;
+}
+
+.menu-kora {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+
+    gap: 10px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-kora a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 7px 3px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--taupe);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.menu-kora a .material-symbols-outlined {
+    font-size: 12px;
+}
+
+.menu-kora a.activo {
+    color: var(--terracota);
+    border-bottom: 2px solid var(--terracota);
+}
+
+
+.menu-kora a:hover {
+    color: var(--terracota);
+}
+
+@media (max-width: 700px) {
+    .navbar-kora {
+        overflow-x: auto;
+        gap: 15px;
+    }
+
+    .menu-kora {
+        gap: 8px;
+    }
+}
